@@ -15,7 +15,7 @@ public class BrickBreakerGame extends JFrame implements ActionListener, KeyListe
     private boolean[] bricks;
     private int score;
 
-    public BrickBreakerGame () {
+    public BrickBreakerGame() {
         setTitle("Brick Breaker");
         setSize(WIDTH, HEIGHT);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -64,6 +64,7 @@ public class BrickBreakerGame extends JFrame implements ActionListener, KeyListe
             System.exit(0);
         }
     }
+
     private void movePaddle() {
         if (paddleX < 0) {
             paddleX = 0;
@@ -107,7 +108,7 @@ public class BrickBreakerGame extends JFrame implements ActionListener, KeyListe
         }
     }
 
-    public void paint (Graphics g) {
+    public void paint(Graphics g) {
         super.paint(g);
 
         // bricks
@@ -131,9 +132,10 @@ public class BrickBreakerGame extends JFrame implements ActionListener, KeyListe
         g.drawString("Score " + score, 10, 20);
     }
 
-    public void keyTyped (KeyEvent e) {}
+    public void keyTyped(KeyEvent e) {
+    }
 
-    public void keyPressed (KeyEvent e) {
+    public void keyPressed(KeyEvent e) {
         if (e.getKeyCode() == KeyEvent.VK_LEFT) {
             paddleX -= paddleSpeed;
         } else if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
@@ -141,7 +143,8 @@ public class BrickBreakerGame extends JFrame implements ActionListener, KeyListe
         }
     }
 
-    public void keyReleased (KeyEvent e) {}
+    public void keyReleased(KeyEvent e) {
+    }
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
