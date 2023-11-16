@@ -1,3 +1,4 @@
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyListener;
 import javax.swing.*;
@@ -33,5 +34,23 @@ public class BrickBreakerGame extends JFrame implements ActionListener, KeyListe
 
         addKeyListener(this);
         setFocusable(true);
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        moveBall();
+        movePaddle();
+        checkCollision();
+        repaint();
+    }
+
+    private void moveBall() {
+
+    }
+    private void movePaddle() {
+
+    }
+
+    private void checkCollision() {
+
     }
 }
