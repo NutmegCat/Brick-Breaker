@@ -105,4 +105,28 @@ public class BrickBreakerGame extends JFrame implements ActionListener, KeyListe
             }
         }
     }
+
+    public void paint (Graphics g) {
+        super.paint(g);
+
+        // bricks
+        g.setColor(Color.BLUE);
+        for (int i = 0; i < bricks.length; i++) {
+            if (bricks[i]) {
+                g.fillRect((i % 10) * 40, (i / 10) * 20, 40, 20);
+            }
+        }
+
+        // ball
+        g.setColor(Color.RED);
+        g.fillOval(ballX, ballY, 20, 20);
+
+        // paddle
+        g.setColor(Color.GREEN);
+        g.fillRect(paddleX, HEIGHT - 30, 100, 20);
+
+        // score
+        g.setColor(Color.black);
+        g.drawString("Score " + score, 10, 20);
+    }
 }
