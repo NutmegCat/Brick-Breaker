@@ -1,5 +1,6 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import javax.swing.*;
 import java.awt.*;
@@ -129,4 +130,16 @@ public class BrickBreakerGame extends JFrame implements ActionListener, KeyListe
         g.setColor(Color.black);
         g.drawString("Score " + score, 10, 20);
     }
+
+    public void keyTyped (KeyEvent e) {}
+
+    public void keyPressed (KeyEvent e) {
+        if (e.getKeyCode() == KeyEvent.VK_LEFT) {
+            paddleX -= paddleSpeed;
+        } else if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
+            paddleX += paddleSpeed;
+        }
+    }
+
+    public void keyReleased (KeyEvent e) {}
 }
