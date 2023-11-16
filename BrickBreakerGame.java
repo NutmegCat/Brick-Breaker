@@ -142,4 +142,11 @@ public class BrickBreakerGame extends JFrame implements ActionListener, KeyListe
     }
 
     public void keyReleased (KeyEvent e) {}
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            BrickBreakerGame game = new BrickBreakerGame();
+            game.setVisible(true);
+        });
+    }
 }
